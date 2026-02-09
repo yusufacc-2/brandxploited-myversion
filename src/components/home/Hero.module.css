@@ -73,3 +73,31 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+@media (max-width: 768px) {
+    .hero {
+        height: 100svh;
+        /* Use svh for mobile browsers */
+    }
+
+    .line {
+        font-size: 3.5rem;
+        /* Ensure readable on small screens */
+    }
+
+    .subline {
+        font-size: 1rem;
+        padding: 0 20px;
+        margin: 20px 0 40px;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .actions button {
+        width: 100%;
+    }
+}
