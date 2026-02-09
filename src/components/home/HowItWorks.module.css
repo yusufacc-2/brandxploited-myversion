@@ -1,0 +1,134 @@
+.section {
+    padding: 120px 20px;
+    background: #050505;
+    color: #fff;
+    overflow: hidden;
+}
+
+.heading {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 80px;
+    color: #fff;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.lineBase {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.lineFill {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 0%;
+    /* animate this */
+    background: var(--primary);
+    z-index: 2;
+    box-shadow: 0 0 10px var(--primary);
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 80px;
+    z-index: 3;
+}
+
+.step:last-child {
+    margin-bottom: 0;
+}
+
+.left {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.left .content {
+    margin-right: 50px;
+    /* Space for marker and line */
+}
+
+.right .content {
+    margin-left: 50px;
+}
+
+.marker {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 40px;
+    height: 40px;
+    background: #000;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-bebas);
+    font-size: 1.2rem;
+    color: var(--primary);
+    z-index: 4;
+}
+
+.content {
+    width: 45%;
+}
+
+.content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.content p {
+    color: #888;
+    font-family: var(--font-inter);
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .lineBase,
+    .lineFill {
+        left: 20px;
+    }
+
+    .step {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .left {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .marker {
+        left: 20px;
+    }
+
+    .left .content,
+    .right .content {
+        margin: 0 0 0 60px;
+        width: 100%;
+    }
+}

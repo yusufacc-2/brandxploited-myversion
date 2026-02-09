@@ -1,0 +1,57 @@
+.wrapper {
+    overflow: hidden;
+    background: var(--primary);
+    color: #000;
+    padding: 40px 0;
+    white-space: nowrap;
+    position: relative;
+    z-index: 5;
+}
+
+.track {
+    display: flex;
+    gap: 80px;
+    animation: scroll 20s linear infinite;
+    width: max-content;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.value {
+    font-family: var(--font-bebas);
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.sub {
+    font-family: var(--font-inter);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .value {
+        font-size: 40px;
+    }
+
+    .track {
+        gap: 40px;
+    }
+}
