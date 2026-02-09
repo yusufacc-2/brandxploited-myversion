@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import styles from "./About.module.css";
 
 const About = () => {
@@ -9,11 +8,11 @@ const About = () => {
             <div className={styles.container}>
                 <div className={styles.imageCol}>
                     <div className={styles.imageWrapper}>
-                        <Image
-                            src="/images/about.png"
+                        <img
+                            src="/brandxploited-myversion/images/about.png"
                             alt="BrandXploited Studio"
-                            width={800}
-                            height={600}
+                            width="800"
+                            height="600"
                             className={styles.image}
                         />
                         <div className={styles.overlay}></div>

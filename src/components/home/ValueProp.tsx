@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./ValueProp.module.css";
@@ -82,11 +81,11 @@ const ValueProp = () => {
                 <div className={styles.visual} ref={imageRef}>
                     <div className={styles.glow}></div>
                     <div className={styles.imageWrapper}>
-                        <Image
-                            src="/images/hoodie.png"
+                        <img
+                            src="/brandxploited-myversion/images/hoodie.png"
                             alt="Floating Hoodie Mockup"
-                            width={600}
-                            height={600}
+                            width="600"
+                            height="600"
                             className={styles.image}
                         />
                     </div>
